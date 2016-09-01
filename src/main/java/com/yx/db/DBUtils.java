@@ -7,6 +7,7 @@ import javax.sql.DataSource;
 import java.util.concurrent.ConcurrentHashMap;
 
 /**
+ * 读写分离、分库分表
  * User: LiWenC
  * Date: 16-9-1
  */
