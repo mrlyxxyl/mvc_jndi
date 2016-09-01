@@ -1,0 +1,36 @@
+局部配置：不用在tomcat/conf/context.xml中配置
+    在项目下创建META-INF/context.xml文件：
+            <Resource
+                name="DBPool"
+                type="javax.sql.DataSource"
+                password="root"
+                driverClassName="com.mysql.jdbc.Driver"
+                maxIdle="20"
+                maxWait="5000"
+                username="root"
+                url="jdbc:mysql:///test"
+            />
+全局配置：
+    tomcat中conf/context.xml文件添加：
+    		<Resource
+    			name="DBPool"
+    			type="javax.sql.DataSource"
+    			password="root"
+    			driverClassName="com.mysql.jdbc.Driver"
+    			maxIdle="20"
+    			maxWait="5000"
+    			username="root"
+    			url="jdbc:mysql:///test"
+    		/>
+    		 <Resource
+                name="DBPool_aliyun"
+                type="javax.sql.DataSource"
+                driverClassName="com.mysql.jdbc.Driver"
+                password="root"
+                username="root"
+                url="jdbc:mysql://115.28.100.160:3306/test"
+                maxActive="50"
+                maxIdle="20"
+                maxWait="5000"
+                />
+在项目和tomcat/lib下分别加入mysql-connector-java.jar包
