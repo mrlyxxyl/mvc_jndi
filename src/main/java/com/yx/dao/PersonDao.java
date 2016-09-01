@@ -27,7 +27,7 @@ public class PersonDao {
         if (dataSource == null) {
             throw new RuntimeException("can't get dataSource!");
         }
-        threadLocal.get().setDataSource(dataSource);//
+        threadLocal.get().setDataSource(dataSource);//线程安全
         return threadLocal.get().queryForList("select * from person");
        /* Connection connection = dataSource.getConnection();
         Statement statement = connection.createStatement();
