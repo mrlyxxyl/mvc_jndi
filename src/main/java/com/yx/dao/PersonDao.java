@@ -26,6 +26,7 @@ public class PersonDao {
         DataSource dataSource = DBUtils.getDataSource(serverName);
         if (dataSource == null) {
             throw new RuntimeException("can't get dataSource!");
+//            return jdbcTemplate.queryForList("select * from person"); jdbcTemplate默认注册了一个数据源
         }
         threadLocal.get().setDataSource(dataSource);//线程安全
         return threadLocal.get().queryForList("select * from person");
