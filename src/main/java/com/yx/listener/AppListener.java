@@ -17,6 +17,7 @@ public class AppListener implements ServletContextListener {
 
     public void contextInitialized(ServletContextEvent sce) {
         DBUtils.initDataSource();
+        DBUtils.initConnections();
     }
 
     public void contextDestroyed(ServletContextEvent sce) {

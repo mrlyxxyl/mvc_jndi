@@ -6,6 +6,7 @@ import org.springframework.stereotype.Repository;
 
 import javax.annotation.Resource;
 import javax.sql.DataSource;
+import java.sql.Connection;
 import java.sql.SQLException;
 import java.util.List;
 import java.util.Map;
@@ -24,6 +25,8 @@ public class PersonDao {
 
     public List<Map<String, Object>> queryPersons(String serverName) throws SQLException {
         DataSource dataSource = DBUtils.getDataSource(serverName);
+        Connection connection = DBUtils.getConnection(serverName);
+        DBUtils.releaseConnection(serverName, connection);
         if (dataSource == null) {
             throw new RuntimeException("can't get dataSource!");
 //            return jdbcTemplate.queryForList("select * from person"); jdbcTemplate默认注册了一个数据源
