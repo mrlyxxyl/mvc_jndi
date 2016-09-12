@@ -1,24 +1,69 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Context>
     <Resource
-            name="DBPool_one"
+            name="m_test_0"
             type="javax.sql.DataSource"
             driverClassName="com.mysql.jdbc.Driver"
             password="root"
             username="root"
-            url="jdbc:mysql://192.168.10.157/test"
+            url="jdbc:mysql://192.168.10.156:3306/test_0"
             maxActive="50"
             maxIdle="20"
             maxWait="5000"
             />
 
     <Resource
-            name="DBPool_local"
+            name="m_test_1"
             type="javax.sql.DataSource"
             driverClassName="com.mysql.jdbc.Driver"
             password="root"
             username="root"
-            url="jdbc:mysql://192.168.10.153:3306/test"
+            url="jdbc:mysql://192.168.10.156:3306/test_1"
+            maxActive="50"
+            maxIdle="20"
+            maxWait="5000"
+            />
+    <Resource
+            name="m_test_2"
+            type="javax.sql.DataSource"
+            driverClassName="com.mysql.jdbc.Driver"
+            password="root"
+            username="root"
+            url="jdbc:mysql://192.168.10.156:3306/test_2"
+            maxActive="50"
+            maxIdle="20"
+            maxWait="5000"
+            />
+    <Resource
+            name="s_test_0"
+            type="javax.sql.DataSource"
+            driverClassName="com.mysql.jdbc.Driver"
+            password="root"
+            username="root"
+            url="jdbc:mysql://192.168.10.157:3306/test_0"
+            maxActive="50"
+            maxIdle="20"
+            maxWait="5000"
+            />
+
+    <Resource
+            name="s_test_1"
+            type="javax.sql.DataSource"
+            driverClassName="com.mysql.jdbc.Driver"
+            password="root"
+            username="root"
+            url="jdbc:mysql://192.168.10.157:3306/test_1"
+            maxActive="50"
+            maxIdle="20"
+            maxWait="5000"
+            />
+    <Resource
+            name="s_test_2"
+            type="javax.sql.DataSource"
+            driverClassName="com.mysql.jdbc.Driver"
+            password="root"
+            username="root"
+            url="jdbc:mysql://192.168.10.157:3306/test_2"
             maxActive="50"
             maxIdle="20"
             maxWait="5000"
